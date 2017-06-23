@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Review Iteration</title>
+</head>
+<body>
+	<h1>Reviews as collection:</h1>
+	<ul>
+		<li th:each="p: ${reviewsAsCollection}" th:text="${p.name} + ',' + ${p.image} + ',' + ${p.hunger} 
+		+ ',' + ${p.taste}" />
+	</ul>
+	
+	<h1>Reviews as map:</h1>
+	<p th:text="'Reviews: ' + ${reviewsAsMap}" />
+		<ul>
+		<li th:each="reviewsEntry: ${reviewssAsMap}" th:text="'Entry is ' + ${reviewsEntry} + '/' 
+		+ ${reviewsEntry.key} + ',' + ${reviewsEntry.value.hunger} + ',' + ${reviewsEntry.value.taste}" />
+	</ul>
+	
+	<h1>Reviews as collection with iteration status:</h1>
+	<ul>
+		<li th:each="p,status: ${reviewsAsCollection}">
+			<p th:text="'Count: ' + ${status.count}" />
+			<p th:text="'Even: ' + ${status.even}" />
+			<p th:text="'First: ' + ${status.first}" />
+			<p th:text="'Number of elements: ' + ${status.size}" />
+			<p th:text="${p.name} + ',' + ${p.hunger} + ',' + ${p.taste}" />
+		</li>
+	</ul> 
+	
+</body>
+</html>
