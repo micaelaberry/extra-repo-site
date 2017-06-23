@@ -1,24 +1,28 @@
 package review_package;
 
-	import org.springframework.stereotype.Controller;
+	import javax.annotation.Resource;
+
+import org.springframework.stereotype.Controller;
 	import org.springframework.ui.Model;
 	import org.springframework.web.bind.annotation.RequestMapping;
 	import org.springframework.web.bind.annotation.RequestParam;
 
 	@Controller
-	public class ReviewController extends ReviewRepoController {  //handles requests in browser
+	public class ReviewController {  //handles requests in browser
+		
+		@Resource
+		ReviewRepo reviewRepo = new ReviewRepo();
     
-		@RequestMapping("/allplaces")
+		@RequestMapping("/alltacos")
 		public String fetchReview(Model model) {
-			model.addAttribute("reviewsAsMap", reviews);
-			model.addAttribute("reviewsAsCollection", reviews.values());
-			return "reviewIteration";
+			model.addAttribute("reviewsAsCollection", reviewRepo.findAll());
+			return "alltacos";
 		}
 	
-	    @RequestMapping("/tacoreviews")
-	    public String greeting(@RequestParam(value="name", required=false, defaultValue="World") String name, Model model) {
-	        model.addAttribute("name", name);
-	        return "greeting"; //finds the greeting html folder 
+	    @RequestMapping("/tacoreview")
+	    public String oneTaco(@RequestParam("id")Long id, Model model){
+			model.addAttribute("singleReview", reviewRepo.findOne(id));
+	        return "onetaco";  
 	    }
 }
 	

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>All Reviews</title>
+</head>
+<body>
+	<div th:each="reviews: ${reviewsAsCollection}">
+	<p th:text="${reviews.getTitle()}"></p>
+	<p th:text="${reviews.getImage()}"></p>
+	<p th:text="${reviews.getTaste()}"></p>
+	<p th:text="${reviews.getDescription()}"></p>
+	</div>
+	
+
+</body>
+</html>
