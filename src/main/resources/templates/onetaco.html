@@ -4,13 +4,13 @@
 <title>Single Reviews</title>
 </head>
 <body>
-<img th:src="${singleReview.imageUrl}"/>
+<div>
+ <img th:src="${singleReview.imageURL}"/>
 
  <p th:text= "${singleReview.id}"></p>
  <p th:text= "${singleReview.title}"></p>
  <p th:text= "${singleReview.description}"></p>
- 
+ </div>
 	
-
 </body>
 </html>

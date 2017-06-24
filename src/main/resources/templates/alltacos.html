@@ -6,7 +6,7 @@
 <body>
 	<div th:each="review: ${reviewsAsCollection}">
 	<h1><a th:href="@{/singleReview(id=${review.id})}" th:text="${review.title}"></a></h1>
-	<p th:text="${review.image}"></p>
+	<img th:src="${review.imageURL}"></img>
 	<p th:text="${review.taste}"></p>
 	<p th:text="${review.description}"></p>
 	</div>
