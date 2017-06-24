@@ -5,7 +5,7 @@ public class TacoReview {
 	private long id; //should be long
 	private String title;
 	private String taste;
-	private String image;
+	private String imageURL;
 	public String description;
 
 	public long getId() { //id
@@ -17,7 +17,7 @@ public class TacoReview {
 	}
 	
 	public String getImage() { //get taco level
-		return image;
+		return imageURL;
 	}
 
 
@@ -31,10 +31,10 @@ public class TacoReview {
 	}
 	
 	
-	public TacoReview(long id, String title, String image, String taste, String description) {
+	public TacoReview(long id, String title, String imageURL, String taste, String description) {
 		this.id = id;
 		this.title = title;
-		this.image = image;
+		this.imageURL = imageURL;
 		this.taste = taste;
 		this.description= description;
 
