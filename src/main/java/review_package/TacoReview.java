@@ -16,7 +16,7 @@ public class TacoReview {
 		return title;
 	}
 	
-	public String getImageURL() { //get taco level
+	public String getImageURL() { //get taco pic
 		return imageURL;
 	}
 
