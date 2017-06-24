@@ -13,13 +13,13 @@ import org.springframework.stereotype.Controller;
 		@Resource
 		ReviewRepo reviewRepo = new ReviewRepo();
     
-		@RequestMapping("/alltacos")
+		@RequestMapping("/allreviews")
 		public String fetchReview(Model model) {
 			model.addAttribute("reviewsAsCollection", reviewRepo.findAll());
 			return "alltacos";
 		}
 	
-	    @RequestMapping("/tacoreview")
+	    @RequestMapping(value = "/singleReview")
 	    public String oneTaco(@RequestParam("id")Long id, Model model){
 			model.addAttribute("singleReview", reviewRepo.findOne(id));
 	        return "onetaco";  

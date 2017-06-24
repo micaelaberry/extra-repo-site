@@ -8,7 +8,7 @@ public class TacoReview {
 	private String image;
 	public String description;
 
-	public long getID() { //id
+	public long getId() { //id
 		return id;
 	}
 	
@@ -38,10 +38,6 @@ public class TacoReview {
 		this.taste = taste;
 		this.description= description;
 
-	}
-	@Override
-	public String toString() {
-		return (id  + title + image + taste + description);
 	}
 	
 }
