@@ -7,12 +7,12 @@
 </head>
 <header>
 	<h1>Columbus Tacos Reviews</h1>
+
 </header>
 <body>
 	<div>
 		<div class="container">
 			<section>
-
 				<blockquote>
 					<h2>Love tacos but not sure where to start? Well I have
 						visited some of the best taco places around. Take a look below!</h2>
@@ -26,8 +26,9 @@
 					<a th:href="@{/singleReview(id=${review.id})}"
 						th:text="${review.title}"></a>
 				</h3>
-				<img class="images" th:src="${review.imageURL}"></img>
-				<p th:text="${review.description}"></p>
+				<img class="images1" th:src="${review.imageURL}"></img>
+				<br></br>
+				<a th:href="@{/singleReview(id=${review.id})}">Read the full review here...</a>
 				<p th:text="${review.taste}"></p>
 			</div>
 		</div>
