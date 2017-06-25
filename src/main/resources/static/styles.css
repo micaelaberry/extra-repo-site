@@ -31,15 +31,15 @@ h3 {
 	margin: left;
 }
 
-.tacoheader img {
+.tacoheader {
 	height: 400px;
 	width: 800px;
 	margin-right: 20px;
 }
 
 .images {
-	width: 260px;
-	height: 200px;
+	width: 660px;
+	height: 500px;
 	margin: 5px;
 }
 div {
