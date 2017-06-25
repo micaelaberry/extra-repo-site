@@ -1,16 +1,24 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" type="text/css" href="styles.css"></link>
+
 <head>
 <title>Single Reviews</title>
 </head>
-<body>
-<div>
- <img th:src="${singleReview.imageURL}"/>
 
- <p th:text= "${singleReview.id}"></p>
- <p th:text= "${singleReview.title}"></p>
- <p th:text= "${singleReview.description}"></p>
- </div>
-	
+<body>
+	<div class="container">
+
+		<div>
+			<h3>
+				<p th:text="${singleReview.title}"></p>
+			</h3>
+
+			<img class"images" th:src="${singleReview.imageURL}" />
+			<p th:text="${singleReview.description}"></p>
+			<p th:text="${singleReview.taste}"></p>
+		</div>
+
+	</div>
 </body>
 </html>

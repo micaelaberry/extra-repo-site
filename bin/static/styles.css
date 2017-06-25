@@ -1,0 +1,66 @@
+html {
+	font-family: Helvetica, sans-serif;
+}
+
+header {
+	padding: 10px;
+	color: white;
+	background-color: black;
+	display: flex;
+	justify-content: space-between;
+}
+
+body {
+	background: black no-repeat;
+	background-size: 1500px;
+	background-attachment: fixed;
+}
+
+.container {
+	background-color: white;
+	max-width: 90%;
+	margin: 0 auto;
+}
+h2{
+	align-items: center;
+}
+
+h3 {
+	background-color: lightgrey;
+	padding: 10px;
+	margin: left;
+}
+
+.tacoheader img {
+	height: 400px;
+	width: 800px;
+	margin-right: 20px;
+}
+
+.images {
+	width: 260px;
+	height: 200px;
+	margin: 5px;
+}
+div {
+	max-width: 1150px;
+	min-width: 400px;
+	padding-top: 10px;
+	padding-bottom: 40px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.imageContainer {
+	display: inline-block;
+	padding: 0;
+	align-content: center;
+}
+
+
+footer {
+	padding: 10px;
+	color: white;
+	background-color: black;
+	text-align: center;
+}

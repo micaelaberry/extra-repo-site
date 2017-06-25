@@ -1,16 +1,39 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head>
-<title>Taco Reviews</title>
-</head>
-<body>
-	<div th:each="review: ${reviewsAsCollection}">
-	<h1><a th:href="@{/singleReview(id=${review.id})}" th:text="${review.title}"></a></h1>
-	<img th:src="${review.imageURL}"></img>
-	<p th:text="${review.taste}"></p>
-	<p th:text="${review.description}"></p>
-	</div>
-	
 
+<link rel="stylesheet" type="text/css" href="styles.css"></link>
+<head>
+<title>Columbus Taco Reviews</title>
+</head>
+<header>
+	<h1>Columbus Tacos Reviews</h1>
+</header>
+<body>
+	<div>
+		<div class="container">
+
+			<section>
+
+				<blockquote>
+					<h2>Love tacos but not sure where to start? Well I have
+						visited some of the best taco places around. Take a look below!</h2>
+					<br></br>
+				</blockquote>
+
+			</section>
+
+			<div th:each="review: ${reviewsAsCollection}">
+				<h3>
+					<a th:href="@{/singleReview(id=${review.id})}"
+						th:text="${review.title}"></a>
+				</h3>
+				<img th:src="${review.imageURL}"></img>
+				<p th:text="${review.description}"></p>
+				<p th:text="${review.taste}"></p>
+			</div>
+		</div>
+
+
+	</div>
 </body>
 </html>
